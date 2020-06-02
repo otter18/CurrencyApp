@@ -25,7 +25,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                TextField("1 \(CurrencyInfo[base_currency]!["symbol"] as! String)", text: $amount)
+                TextField("1 \(CurrencyInfo[base_currency]!["symbol_native"] as! String)", text: $amount)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.numberPad)
                     .padding()

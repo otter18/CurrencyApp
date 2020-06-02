@@ -24,12 +24,12 @@ struct CurrencyExtendedCell: View {
                 .font(.title)
             
             HStack {
-                TextField("1 \(CurrencyInfo[base]!["symbol"] as! String)", text: $amount)
+                TextField("1 \(CurrencyInfo[base]!["symbol_native"] as! String)", text: $amount)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.numberPad)
                 
                 
-                Text(base)
+                Text(CurrencyInfo[base]!["symbol_native"] as! String)
                     .font(.largeTitle)
                     .fontWeight(.heavy)
                 
@@ -49,13 +49,13 @@ struct CurrencyExtendedCell: View {
                 
                 Spacer()
                 
-                Text(name)
+                Text(CurrencyInfo[name]!["symbol_native"] as! String)
                     .font(.largeTitle)
                     .fontWeight(.heavy)
                 
             }
-            Spacer()
             Text("Exchange rate on \(self.date)")
+                .padding(.top, 100)
             Spacer()
             
         }
@@ -74,7 +74,7 @@ struct CurrencyCell: View {
         HStack {
             Text(CurrencyInfo[name]!["name"] as! String)
             Spacer()
-            Text("\((Double(self.amount) ?? 1) * rate, specifier: "%.2f") \(CurrencyInfo[name]!["symbol"] as! String)")
+            Text("\((Double(self.amount) ?? 1) * rate, specifier: "%.2f") \(CurrencyInfo[name]!["symbol_native"] as! String)")
         }
     }
 }
