@@ -3,6 +3,7 @@
 - Language: <code>Swift</code>
 - Framework: <code>SwiftUI</code>
 - API:  https://exchangeratesapi.io
+- Список валют и символы: https://gist.github.com/Fluidbyte/2973986
 
 <table border="1">
    <caption><h3>Скриншоты</h3></caption>
