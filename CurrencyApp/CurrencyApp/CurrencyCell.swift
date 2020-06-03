@@ -44,7 +44,7 @@ struct CurrencyExtendedCell: View {
             
             HStack {
                 
-                Text("\((Double(self.amount) ?? 1) * rate, specifier: "%.2f")")
+                Text("\((Double(self.amount) ?? 1) * rate, specifier: "%.\(CurrencyInfo[name]!["decimal_digits"] as! Int)f")")
                     .font(.title)
                 
                 Spacer()
@@ -74,7 +74,7 @@ struct CurrencyCell: View {
         HStack {
             Text(CurrencyInfo[name]!["name"] as! String)
             Spacer()
-            Text("\((Double(self.amount) ?? 1) * rate, specifier: "%.2f") \(CurrencyInfo[name]!["symbol_native"] as! String)")
+            Text("\((Double(self.amount) ?? 1) * rate, specifier: "%.\(CurrencyInfo[name]!["decimal_digits"] as! Int)f") \(CurrencyInfo[name]!["symbol_native"] as! String)")
         }
     }
 }
