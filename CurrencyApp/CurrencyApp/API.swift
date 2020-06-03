@@ -20,7 +20,7 @@ class Api {
     func getRates(base_currency: String, complition: @escaping ((([String:Double], String)) -> ())) {
         guard
             let url = URL(string: "https://api.exchangeratesapi.io/latest?base=\(base_currency)")
-            else { return }
+        else { return }
 
         
         URLSession.shared.dataTask(with: url) { (data, _, _) in
@@ -35,7 +35,7 @@ class Api {
     func getCurrencyList(complition: @escaping (([String]) -> ())) {
         guard
             let url = URL(string: "https://api.exchangeratesapi.io/latest")
-            else {
+        else {
                 return
         }
         
