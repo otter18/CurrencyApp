@@ -1,7 +1,8 @@
 # <img src=screenshots/logo.jpg width="40" height="40"> CurrencyApp 
 ### Конвертер валют
-Language: <code>Swift</code>
-Framework: <code>SwiftUI</code>
+- Language: <code>Swift</code>
+- Framework: <code>SwiftUI</code>
+- API:  https://exchangeratesapi.io
 
 <table border="1">
    <caption><h3>Скриншоты</h3></caption>
